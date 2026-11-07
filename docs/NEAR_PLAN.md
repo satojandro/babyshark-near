@@ -42,6 +42,25 @@ amount > 0 · paid + amount ≤ budget · recipient = pinned kid · milestone op
 only the OutLayer callback can release · parent can cancel → refund remainder ·
 milestone auto-closes when fully paid.
 
+## Decision: escrow contract, not an OutLayer custody wallet, holds the money
+
+OutLayer Agent Custody (skill: https://skills.outlayer.ai/agent-custody/SKILL.md)
+was evaluated as the escrow instead of writing a contract:
+
+- **Custody wallet + policy:** caps, kid-only allowlist and parent approval above a
+  threshold come for free, and it works on testnet. But whoever holds the `wk_`
+  API key can transfer at any time within the policy. Verification would be a
+  convention, not a rule: a prompt-injected agent could pay the kid up to the
+  cap without any work being checked. That breaks the core thesis.
+- **Payment checks** (the skill's "milestone payments" pattern): funds are claimed
+  by whoever holds the bearer `check_key`, and they settle through NEAR Intents,
+  which are mainnet-only. Neither fits.
+- **Escrow contract:** funds move only in the callback carrying OutLayer's
+  attested verdict. Verification is enforced by the chain. **Chosen.**
+
+Custody stays a stretch goal for the agent's own operating budget (paying for
+OutLayer runs and NEAR AI calls), where a capped hot wallet is the right tool.
+
 ## Schedule
 
 | Day | Work | Done when |
