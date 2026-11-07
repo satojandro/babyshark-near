@@ -2,6 +2,22 @@
 
 **An AI mentor-investor that reviews kids' coding work and pays out USDT when milestones are hit.**
 
+> ## NEAR HACKATHON 2026 — what's new here
+>
+> This repository continues **BabyShark VC**, which won first place at
+> [Aleph Hackathon 2026](https://hacki.crecimiento.build/h/aleph-hackathon-2026)
+> (Tether WDK track, original repo: [satojandro/pocketvc](https://github.com/satojandro/pocketvc)).
+>
+> - **Baseline (not judged):** everything up to the tag
+>   [`pre-hackathon`](https://github.com/satojandro/babyshark-near/tree/pre-hackathon)
+>   — the EVM/Sepolia version described in the rest of this README.
+> - **Built during NEAR HACKATHON (judged):**
+>   [`pre-hackathon...main`](https://github.com/satojandro/babyshark-near/compare/pre-hackathon...main)
+>   — moving escrow, verification and payouts onto NEAR + OutLayer.
+>
+> Plan and status: [`docs/NEAR_PLAN.md`](docs/NEAR_PLAN.md). This section will be
+> replaced by NEAR-first "do X → see Y" instructions before submission.
+
 ## Why — Mateo's summer
 
 Mateo (12) spent the summer wanting to build a Roblox game. His dad wanted to encourage him but can't read code — no way to tell progress from play. Meanwhile Mateo earned $5 taking out the trash: money for work that teaches nothing. Two gaps: **visibility** (nobody who understands the work is watching) and **funding trust** (money given on faith). BabyShark closes both: an AI mentor reviews the real code daily, and USDT payouts release only when milestones verify. Anyone can back a kid's project via QR.
