@@ -65,7 +65,7 @@ OutLayer runs and NEAR AI calls), where a capped hot wallet is the right tool.
 
 | Day | Work | Done when |
 |---|---|---|
-| Nov 7–8 | Spike: OutLayer hello-world WASI module, called from a testnet contract via yield/resume | Callback receives attested output on testnet |
+| Nov 7–8 | ✅ Spike: OutLayer WASI verifier called from a testnet contract via yield/resume ([result](SPIKE_OUTLAYER.md)) | Callback receives attested output on testnet |
 | Nov 8–10 | Escrow contract + unit/sandbox tests; mock USDT NEP-141 on testnet | Fund → verdict stub → payout / hold / refund all tested |
 | Nov 10–11 | Verifier: GitHub checks + LLM verdict, secrets in OutLayer | Real repo yields attested verdict that the contract honours |
 | Nov 12–13 | Web: NEAR wallet login, dashboard reads contract, mentor chat on NEAR AI Cloud | Full loop clickable on testnet |

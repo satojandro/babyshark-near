@@ -9,3 +9,6 @@ out/
 .env
 web/node_modules/
 web/.next/
+
+# Built verifier is committed on purpose: the escrow contract pins its URL + sha256
+!verifier/dist/
